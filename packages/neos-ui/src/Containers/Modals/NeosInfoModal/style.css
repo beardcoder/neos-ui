@@ -1,0 +1,37 @@
+.neosInfoContent {
+    padding: var(--spacing-Half) var(--spacing-Full);
+}
+
+.neosInfo {
+    margin-top: var(--spacing-Half);
+}
+
+.neosInfo__list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+.neosInfo__list dt {
+    font-weight: bold;
+    grid-column-start: 1;
+    padding-top: var(--spacing-Full);
+    padding-bottom: var(--spacing-Full);
+    border-bottom: 1px solid var(--colors-ContrastDark);
+}
+
+.neosInfo__list dd {
+    margin-left: 0;
+    padding-left: var(--spacing-Full);
+    padding-top: var(--spacing-Full);
+    padding-bottom: var(--spacing-Full);
+    border-bottom: 1px solid var(--colors-ContrastDark);
+}
+
+.neosInfo__list dt:last-of-type,
+.neosInfo__list dd:last-of-type {
+    border-bottom: 0;
+}
+
+.neosInfoTitle__Icon {
+    margin-right: var(--spacing-Full);
+}

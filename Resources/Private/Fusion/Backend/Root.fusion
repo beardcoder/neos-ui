@@ -81,6 +81,9 @@ backend = Neos.Fusion:Template {
                 clearClipboard = Neos.Fusion:UriBuilder {
                     action = 'clearClipboard'
                 }
+                getNeosInfo = Neos.Fusion:UriBuilder {
+                    action = 'getNeosInfo'
+                }
                 loadTree = Neos.Fusion:UriBuilder {
                     action = 'loadTree'
                 }

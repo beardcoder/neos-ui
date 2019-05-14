@@ -13,6 +13,7 @@ export interface Routes {
             copyNode: string;
             cutNode: string;
             clearClipboard: string;
+            getNeosInfo: string;
             loadTree: string;
             flowQuery: string;
             getWorkspaceInfo: string;
@@ -139,6 +140,18 @@ export default (routes: Routes) => {
 
     const clearClipboard = () => fetchWithErrorHandling.withCsrfToken(csrfToken => ({
         url: routes.ui.service.clearClipboard,
+
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'X-Flow-Csrftoken': csrfToken,
+            'Content-Type': 'application/json'
+        }
+    })).then(response => fetchWithErrorHandling.parseJson(response))
+    .catch(reason => fetchWithErrorHandling.generalErrorHandler(reason));
+
+    const getNeosInfo = () => fetchWithErrorHandling.withCsrfToken(csrfToken => ({
+        url: routes.ui.service.getNeosInfo,
 
         method: 'POST',
         credentials: 'include',
@@ -531,6 +544,7 @@ export default (routes: Routes) => {
         copyNode,
         cutNode,
         clearClipboard,
+        getNeosInfo,
         createImageVariant,
         loadMasterPlugins,
         loadPluginViews,

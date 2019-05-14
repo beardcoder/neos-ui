@@ -198,6 +198,12 @@
                     They will not get triggered when you are focusing an input field.
                 </source>
             </trans-unit>
+            <trans-unit id="Info__Introduction" xml:space="preserve">
+                <source>
+                    This is the Neos Info Section.
+                    Here you get all infos about your system.
+                </source>
+            </trans-unit>
 			<trans-unit id="Shortcut__UI.RightSideBar.toggle" xml:space="preserve">
 				<source>Toggle inspector</source>
 			</trans-unit>

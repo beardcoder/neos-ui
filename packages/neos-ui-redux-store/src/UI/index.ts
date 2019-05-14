@@ -3,6 +3,7 @@ import {combineReducers} from 'redux';
 
 import * as FlashMessages from '@neos-project/neos-ui-redux-store/src/UI/FlashMessages';
 import * as FullScreen from '@neos-project/neos-ui-redux-store/src/UI/FullScreen';
+import * as NeosInfoModal from '@neos-project/neos-ui-redux-store/src/UI/NeosInfoModal';
 import * as KeyboardShortcutModal from '@neos-project/neos-ui-redux-store/src/UI/KeyboardShortcutModal';
 import * as LeftSideBar from '@neos-project/neos-ui-redux-store/src/UI/LeftSideBar';
 import * as EditModePanel from '@neos-project/neos-ui-redux-store/src/UI/EditModePanel';
@@ -24,6 +25,7 @@ import * as ContentTree from '@neos-project/neos-ui-redux-store/src/UI/ContentTr
 const all = {
     FlashMessages,
     FullScreen,
+    NeosInfoModal,
     KeyboardShortcutModal,
     LeftSideBar,
     EditModePanel,
@@ -49,6 +51,7 @@ const all = {
 export interface State {
     flashMessages: FlashMessages.State;
     fullScreen: FullScreen.State;
+    NeosInfoModal: NeosInfoModal.State;
     keyboardShortcutModal: KeyboardShortcutModal.State;
     leftSideBar: LeftSideBar.State;
     editModePanel: EditModePanel.State;
@@ -84,6 +87,7 @@ export const actions = keys(all).reduce((acc, cur) => ({...acc, [cur]: all[cur].
 export const reducer = combineReducers({
     flashMessages: FlashMessages.reducer,
     fullScreen: FullScreen.reducer,
+    neosInfoModal: NeosInfoModal.reducer,
     keyboardShortcutModal: KeyboardShortcutModal.reducer,
     leftSideBar: LeftSideBar.reducer,
     editModePanel: EditModePanel.reducer,

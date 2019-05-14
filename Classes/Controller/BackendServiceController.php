@@ -362,6 +362,31 @@ class BackendServiceController extends ActionController
     }
 
     /**
+     * Get infos about the application
+     *
+     * @return void
+     */
+    public function getNeosInfoAction()
+    {
+        return json_encode(
+            [
+                'neos' => [
+                    'title' => 'Neos',
+                    'definition' => '4.3.1 »Gryphon«'
+                ],
+                'flow' => [
+                    'title' => 'Flow',
+                    'definition' => '5.3.1'
+                ],
+                'ui' => [
+                    'title' => 'Neos.Ui',
+                    'definition' => '3.3.0'
+                ],
+            ]
+        );
+    }
+
+    /**
      * Persists the clipboard node on cut
      *
      * @param NodeInterface $node

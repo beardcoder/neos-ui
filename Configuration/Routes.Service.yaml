@@ -55,6 +55,14 @@
   httpMethods: ['POST']
 
 -
+  name: 'Get Neos Info'
+  uriPattern: 'get-neos-info'
+  defaults:
+    '@controller': 'BackendService'
+    '@action': 'getNeosInfo'
+  httpMethods: ['POST']
+
+-
   name: 'Load Tree'
   uriPattern: 'load-tree'
   defaults:

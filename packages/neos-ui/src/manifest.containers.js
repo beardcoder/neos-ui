@@ -11,11 +11,13 @@ import NodeCreationDialog from './Containers/Modals/NodeCreationDialog/index';
 import NodeVariantCreationDialog from './Containers/Modals/NodeVariantCreationDialog/index';
 import ReloginDialog from './Containers/Modals/ReloginDialog/index';
 import KeyboardShortcutModal from './Containers/Modals/KeyboardShortcutModal/index';
+import NeosInfoModal from './Containers/Modals/NeosInfoModal/index';
 import UnappliedChangesDialog from './Containers/Modals/UnappliedChangesDialog/index';
 
 import PrimaryToolbar from './Containers/PrimaryToolbar/index';
 import UserDropDown from './Containers/PrimaryToolbar/UserDropDown/index';
 import PublishDropDown from './Containers/PrimaryToolbar/PublishDropDown/index';
+import NeosInfoButton from './Containers/PrimaryToolbar/NeosInfoButton/index';
 import MenuToggler from './Containers/PrimaryToolbar/MenuToggler/index';
 import EditModePanelToggler from './Containers/PrimaryToolbar/EditModePanelToggler/index';
 
@@ -53,11 +55,13 @@ manifest('main.containers', {}, globalRegistry => {
     containerRegistry.set('Modals/NodeCreationDialog', NodeCreationDialog);
     containerRegistry.set('Modals/NodeVariantCreationDialog', NodeVariantCreationDialog);
     containerRegistry.set('Modals/ReloginDialog', ReloginDialog);
+    containerRegistry.set('Modals/NeosInfoModal', NeosInfoModal);
     containerRegistry.set('Modals/KeyboardShortcutModal', KeyboardShortcutModal);
     containerRegistry.set('Modals/UnappliedChangesDialog', UnappliedChangesDialog);
 
     containerRegistry.set('PrimaryToolbar', PrimaryToolbar);
     containerRegistry.set('PrimaryToolbar/Left/MenuToggler', MenuToggler);
+    containerRegistry.set('PrimaryToolbar/Right/NeosInfoButton', NeosInfoButton);
     containerRegistry.set('PrimaryToolbar/Right/EditModePanelToggler', EditModePanelToggler);
     containerRegistry.set('PrimaryToolbar/Right/UserDropDown', UserDropDown);
     containerRegistry.set('PrimaryToolbar/Right/PublishDropDown', PublishDropDown);
